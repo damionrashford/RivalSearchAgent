@@ -44,6 +44,27 @@ A powerful, embeddable AI agent with RAG (Retrieval-Augmented Generation) capabi
                     └───────────────────────────┘
 ```
 
+## 🔍 MCP Server Tools
+
+The RivalSearch Agent integrates with **RivalSearchMCP** for powerful web research capabilities:
+
+### Search Tools
+- **`google_search`** - Comprehensive Google Search with multi-engine fallback, rich snippets detection, and advanced filtering options
+
+### Retrieval Tools  
+- **`retrieve_content`** - Enhanced content retrieval from URLs with support for batch operations and image extraction
+- **`stream_content`** - Stream content from URLs for real-time processing
+
+### Traversal Tools
+- **`traverse_website`** - Comprehensive website traversal with three modes:
+  - **Research mode** - General content exploration
+  - **Documentation mode** - Focused on docs and guides
+  - **Mapping mode** - Website structure analysis
+
+### Analysis Tools
+- **`analyze_content`** - Content analysis with sentiment analysis, key point extraction, and summarization
+- **`research_topic`** - End-to-end research workflows combining search, retrieval, and analysis
+
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -66,17 +87,17 @@ A powerful, embeddable AI agent with RAG (Retrieval-Augmented Generation) capabi
 
 3. **Configure your environment:**
    ```bash
-   # The setup script will create .env from env.example
+   # The setup script will create .env from .env.example
    # Edit .env with your API keys and database URL
    ```
 
 4. **Start using the agent:**
    ```bash
    # CLI mode
-   python cli.py chat
+   python -m src.cli chat
    
    # API mode
-   python api.py
+   python -m src.api
    ```
 
 ## 📖 Usage
@@ -84,25 +105,25 @@ A powerful, embeddable AI agent with RAG (Retrieval-Augmented Generation) capabi
 ### CLI Mode (Interactive Chat)
 ```bash
 # Start interactive chat
-python cli.py chat
+python -m src.cli chat
 
 # Ask a single question
-python cli.py chat --question "What is AI?"
+python -m src.cli chat --question "What is AI?"
 
 # Upload a document
-python cli.py upload document.pdf
+python -m src.cli upload document.pdf
 
 # Show conversation history
-python cli.py chat  # Then type 'history' in chat
+python -m src.cli chat  # Then type 'history' in chat
 
 # List all sessions
-python cli.py chat  # Then type 'sessions' in chat
+python -m src.cli chat  # Then type 'sessions' in chat
 ```
 
 ### API Server Mode
 ```bash
 # Start API server
-python api.py
+python -m src.api
 
 # Server will be available at http://localhost:8000
 # API documentation at http://localhost:8000/docs
@@ -110,8 +131,8 @@ python api.py
 
 ### Library Mode (Python Import)
 ```python
-from core.agent import RivalSearchAgent
-from core.config import AgentConfig
+from src.core.agent import RivalSearchAgent
+from src.core.config import AgentConfig
 
 # Initialize agent
 config = AgentConfig()
@@ -158,8 +179,6 @@ RIVAL_SEARCH_MODEL_NAME=grok:groq-llama3-70b-8192
 | DeepSeek | `deepseek:model-name` | `DEEPSEEK_API_KEY` |
 | Ollama | `ollama:model-name` | None (local) |
 
-
-
 ## 🧠 Memory System
 
 The agent features complete conversation memory within sessions:
@@ -178,32 +197,9 @@ Retrieval-Augmented Generation with local embeddings:
 - **Document Support**: PDF, DOCX, RTF, TXT files
 - **Session Scoped**: Documents isolated per session
 
-
-
 ## 📄 License
 
 MIT License - see LICENSE file for details.
-
-## 🔍 MCP Server Tools
-
-The RivalSearch Agent integrates with **RivalSearchMCP** for powerful web research capabilities:
-
-### Search Tools
-- **`google_search`** - Comprehensive Google Search with multi-engine fallback, rich snippets detection, and advanced filtering options
-
-### Retrieval Tools  
-- **`retrieve_content`** - Enhanced content retrieval from URLs with support for batch operations and image extraction
-- **`stream_content`** - Stream content from URLs for real-time processing
-
-### Traversal Tools
-- **`traverse_website`** - Comprehensive website traversal with three modes:
-  - **Research mode** - General content exploration
-  - **Documentation mode** - Focused on docs and guides
-  - **Mapping mode** - Website structure analysis
-
-### Analysis Tools
-- **`analyze_content`** - Content analysis with sentiment analysis, key point extraction, and summarization
-- **`research_topic`** - End-to-end research workflows combining search, retrieval, and analysis
 
 ## 🔗 Related Projects
 
