@@ -184,6 +184,27 @@ Retrieval-Augmented Generation with local embeddings:
 
 MIT License - see LICENSE file for details.
 
+## 🔍 MCP Server Tools
+
+The RivalSearch Agent integrates with **RivalSearchMCP** for powerful web research capabilities:
+
+### Search Tools
+- **`google_search`** - Comprehensive Google Search with multi-engine fallback, rich snippets detection, and advanced filtering options
+
+### Retrieval Tools  
+- **`retrieve_content`** - Enhanced content retrieval from URLs with support for batch operations and image extraction
+- **`stream_content`** - Stream content from URLs for real-time processing
+
+### Traversal Tools
+- **`traverse_website`** - Comprehensive website traversal with three modes:
+  - **Research mode** - General content exploration
+  - **Documentation mode** - Focused on docs and guides
+  - **Mapping mode** - Website structure analysis
+
+### Analysis Tools
+- **`analyze_content`** - Content analysis with sentiment analysis, key point extraction, and summarization
+- **`research_topic`** - End-to-end research workflows combining search, retrieval, and analysis
+
 ## 🔗 Related Projects
 
 - **[RivalSearchMCP](https://github.com/damionrashford/RivalSearchMCP)** - Web research MCP server
