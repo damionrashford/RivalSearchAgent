@@ -1,0 +1,1 @@
+# RivalSearchMCP src package

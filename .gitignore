@@ -1,50 +1,50 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+!.env.example
+
 # Python
 __pycache__/
 *.py[cod]
-*.pyc
-*.pyo
-*.pyd
+*$py.class
 *.so
-*.egg
-*.egg-info/
-build/
-dist/
 .Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
 
 # Virtual environments
-.venv/
 venv/
 env/
 ENV/
-.env
-*.env
-.env.local
-.env.*.local
+env.bak/
+venv.bak/
+.venv/
+.ENV/
 
-# Data and logs
-*.log
-*.db
-*.sqlite3
-data_store.json
-data/
-logs/
-
-# IDE and editor files
-.DS_Store
-.idea/
+# IDE
 .vscode/
+.idea/
 *.swp
 *.swo
-*.tmp
-*.bak
-*.backup
+*~
 
-# Claude AI files
-.claude/
-.claude.json
-.claude.json.backup
-
-# OS generated files
+# OS
 .DS_Store
 .DS_Store?
 ._*
@@ -53,32 +53,62 @@ logs/
 ehthumbs.db
 Thumbs.db
 
-# Testing
-.pytest_cache/
-.coverage
-htmlcov/
-.tox/
-.nox/
+# Logs
+*.log
+logs/
+log/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# LLM Models and Embeddings
+models/
+embeddings/
+*.bin
+*.safetensors
+*.gguf
+*.ggml
+*.pth
+*.pt
+*.ckpt
+*.h5
+*.hdf5
+*.onnx
+*.tflite
+*.pb
+*.pkl
+*.pickle
+
+# Sentence Transformers cache
+.cache/
+sentence_transformers/
+
+# Document uploads
+uploads/
+documents/
+*.pdf
+*.docx
+*.doc
+*.rtf
+*.txt
+*.md
 
 # Temporary files
+tmp/
+temp/
 *.tmp
 *.temp
-*~
-*.orig
 
-# Secrets and credentials
-*.key
-*.pem
-*.crt
-credentials.json
-secrets.json
-config.local.json
-
-# Node modules (if any)
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
 
 # Jupyter Notebook
 .ipynb_checkpoints
@@ -89,22 +119,80 @@ yarn-error.log*
 # pipenv
 Pipfile.lock
 
-# PEP 582
-__pypackages__/
+# Poetry
+poetry.lock
 
-# Distribution / packaging
-.Python
-develop-eggs/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
+# Node.js (for any frontend components)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Docker
+.dockerignore
+Dockerfile.prod
+
+# Kubernetes
+*.yaml.bak
+*.yml.bak
+
+# Secrets and keys
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+keys/
+
+# API keys and credentials
+api_keys.txt
+credentials.json
+service_account.json
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Large files
+*.iso
+*.dmg
+*.exe
+
+# Project specific
+RivalSearchMCP/cache/
+RivalSearchMCP/models/
+RivalSearchMCP/logs/
+RivalSearchMCP/uploads/
+
+# pgvector extension files
+*.vector
+
+# Memory dumps
+*.dump
+*.sql
+
+# Session data
+sessions/
+session_data/
+
+# Test files
+test_*.py
+*_test.py
+tests/
+test/
+
+# Documentation builds
+docs/_build/
+site/
+
+# Local configuration
+config.local.json
+settings.local.py
+local_config.py
