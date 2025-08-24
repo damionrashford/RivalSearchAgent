@@ -87,21 +87,21 @@ def install_dependencies():
 def setup_environment_file():
     """Set up the environment configuration file."""
     env_file = Path(".env")
-    env_example = Path("env.example")
+    env_example = Path(".env.example")
     
     if env_file.exists():
         print("✅ .env file already exists")
         return True
     
     if not env_example.exists():
-        print("❌ env.example file not found")
+        print("❌ .env.example file not found")
         return False
     
-    # Copy env.example to .env
+    # Copy .env.example to .env
     try:
         with open(env_example, 'r') as src, open(env_file, 'w') as dst:
             dst.write(src.read())
-        print("✅ Created .env file from env.example")
+        print("✅ Created .env file from .env.example")
         print("⚠️  Please edit .env file with your API keys and database URL")
         return True
     except Exception as e:

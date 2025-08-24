@@ -55,7 +55,7 @@ A powerful, embeddable AI agent with RAG (Retrieval-Augmented Generation) capabi
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/damionrashford/RivalSearchAgent
    cd RivalSearchAgent
    ```
 
@@ -187,5 +187,3 @@ MIT License - see LICENSE file for details.
 ## 🔗 Related Projects
 
 - **[RivalSearchMCP](https://github.com/damionrashford/RivalSearchMCP)** - Web research MCP server
-- [Pydantic AI](https://ai.pydantic.dev/) - AI agent framework
-- [pgvector](https://github.com/pgvector/pgvector) - Vector similarity search
