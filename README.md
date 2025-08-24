@@ -39,7 +39,7 @@ A powerful, embeddable AI agent with RAG (Retrieval-Augmented Generation) capabi
                     └───────────────────────────┘
                                  │
                     ┌─────────────▼─────────────┐
-                    │   [RivalSearchMCP](https://github.com/damionrashford/RivalSearchMCP) │
+                    │   RivalSearchMCP │
                     │   (Web Research Tools)   │
                     └───────────────────────────┘
 ```
